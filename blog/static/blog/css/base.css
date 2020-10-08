@@ -1,0 +1,442 @@
+@charset "utf-8";
+
+/* common */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: "Sawarabi Mincho", sans-serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #f3f3f3;
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  text-align: left;
+  font-weight: 300;
+  background-color: #030910;
+}
+.back-color {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+a {
+  color: #f3f3f3;
+  text-decoration: none;
+}
+a:hover {
+  color: #50e8ff;
+  text-decoration: none;
+}
+a:focus-visible {
+  outline: none;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+li > ul {
+  margin-top: 5px;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+pre {
+  line-height: 1.3;
+}
+
+blockquote {
+  padding: 15px;
+  border-left: 5px solid #ccc;
+  border-radius: 2px;
+}
+
+/* container */
+
+.container {
+  font-family: "Sawarabi Mincho", sans-serif;
+  /* font-family: "Ubuntu", sans-serif; */
+  font-style: italic;
+  text-align: left;
+  max-width: 1170px;
+  width: 82%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 769) {
+  .container {
+    width: 90%;
+  }
+}
+
+/*--------------------------main contents------------------------------*/
+
+/* load setting */
+
+.loading-back {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: auto;
+  margin-top: -33px;
+  margin-left: -33px;
+  text-align: center;
+  z-index: 7;
+}
+.loading img {
+  width: 100%;
+  height: auto;
+}
+
+#header,
+  #main,
+  #footer{
+  opacity: 0;
+  transition: all 1.0s;
+}
+  #header.fadein,
+  #main.fadein,
+  #footer.fadein{
+  padding-top: 0;
+  opacity: 1;
+}
+
+
+/* header */
+
+.nav-bar {
+}
+
+.nav-bar .nav-header {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 99;
+}
+.nav-header p.nav-title {
+  padding: 24px 0 20px 10px;
+  margin: 0 auto;
+  text-align: center;
+  color: #50e8ff;
+  font-size: 16px;
+}
+
+.nav-header .image-logo {
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  width: 50px;
+  height: 50px;
+  vertical-align: bottom;
+  border: none;
+}
+.nav-btn {
+  position: absolute;
+  top: 2.9%;
+  right: 4%;
+  z-index: 10000;
+}
+
+.nav-btn #toggle,
+.nav-btn #toggle span {
+  display: inline-block;
+  transition: all 0.5s;
+  box-sizing: border-box;
+}
+
+#toggle {
+  position: relative;
+  width: 23px;
+  height: 21px;
+  transition: all 2s;
+}
+
+#toggle span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f3f3f3;
+}
+
+#toggle span:nth-of-type(1) {
+  top: 7px;
+}
+#toggle span:nth-of-type(2) {
+  top: 14px;
+}
+#toggle span:nth-of-type(3) {
+  top: 21px;
+}
+#toggle.activate span:nth-of-type(1) {
+  transform: translateY(4px) rotate(-45deg);
+}
+#toggle.activate span:nth-of-type(2) {
+  transform: translateY(-3px) rotate(45deg);
+}
+#toggle.activate span:nth-of-type(3) {
+  transform: translateY(-10px) rotate(360deg);
+  display: none;
+}
+/* -------------nav-main-------------- */
+.nav-main {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 85px 0 85px;
+  background-image: url("../images/argen-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.nav-main .global-nav {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 10px 0 40px 0;
+}
+.nav-main .global-nav::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 16px;
+  height: 1px;
+  margin-left: -4px;
+  background-color: #fff;
+}
+.nav-main .global-nav li,
+.nav-main .local-nav li {
+  margin-bottom: 30px;
+}
+.nav-main .global-nav li:last-child,
+.nav-main .local-nav li:last-child {
+  margin-bottom: 0;
+}
+.nav-main .global-nav li a,
+.nav-main .local-nav li a {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.nav-main .lnav-sns a,
+.nav-main .lnav-code a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.7s;
+}
+.nav-main .lnav-sns a:hover,
+.nav-main .lnav-code a:hover {
+  font-size: 20px;
+}
+.nav-main .lnav-sns a.fa-twitter,
+.nav-main .lnav-code a.fa-github {
+  margin-right: 15px;
+}
+
+/* ----------search main--------------- */
+
+.search-main {
+  display: none;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 85px 0 85px;
+  background-image: url("../images/argen-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 100;
+}
+.search-btn{
+  font-size: 21px;
+  position: absolute;
+  top: 18px;
+  right: 10%;
+  z-index: 10001;
+  margin-left: 5px;
+}
+#cancel {
+  display: none;
+}
+
+/* ----- search-form ---- */
+#search-form {
+  margin: 30px 0;
+  padding: 0 0 20px 0;
+  width: 100%;
+  text-align: center;
+}
+#search-form .sub-title {
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+}
+#search-form input {
+  border-radius: 10px;
+  padding: 7px 8px;
+  margin-bottom: 28px;
+  width: 50%;
+  cursor: text;
+  opacity: 0.9;
+}
+#search-form input:focus {
+  opacity: 1;
+}
+.form-btn {
+  width: 40%;
+  color: #333333;
+  font-weight: 200;
+  font-size: 16px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  margin-top: 28px;
+  box-shadow: 0 1px #aaa;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.form-btn:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+.form-btn:active {
+  position: relative;
+  box-shadow: none;
+  top: 2px;
+}
+
+/* -----custom checkbox -----*/
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox:checked + .custom-checkbox-label {
+  background: #50e8ff;
+  color: #000;
+}
+
+.custom-checkbox-label {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 14px;
+  border: solid 1px #ccc;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 4px 16px;
+  cursor: pointer;
+  transition: 0.25s;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.custom-checkbox-label:hover {
+  opacity: 0.8;
+}
+
+
+
+/* ----------------------main------------------------- */
+
+/* header */
+
+main {
+  min-height: 40vh;
+}
+main .screen {
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+main .screen img {
+  height: 180px;
+  width: 100%;
+  vertical-align: bottom;
+  background-image: url("../images/argen-back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ----------------------footer------------------------- */
+
+/* ------- footer ------- */
+
+footer#footer {
+  padding: 0 0 20px 0;
+  text-align: center;
+  margin: 0 auto;
+}
+footer .totop {
+  display: inline;
+  font-size: 20px;
+  transition: all 0.4s;
+  text-align: center;
+}
+/* footer .totop:hover {
+  font-size: 32px;
+} */
+footer .footer-nav {
+  margin: 80px 0 50px 0;
+  padding: 20px 0;
+}
+.footer-nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin: 0 auto;
+}
+.footer-nav ul > li {
+  margin-right: 8px;
+}
+footer #copyright {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width:768){
+
+  footer .totop, #copyright{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+  }
+  .footer-nav ul li {
+    padding: 10px;
+    width: 70px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,18 @@
+{% extends 'booking/base.html' %}
+
+{% block content %}
+
+    <h1>{{ schedule.staff.store.name }}店　{{ schedule.staff.name }}</h1>
+    <form action="" method="POST">{% csrf_token %}
+
+        {{ form.as_p }}
+        <buttom type="submit">送信</buttom>
+
+    </form>
+    <hr>
+    <form action="{% url 'booking:my_page_schedule_delete' schedule.pk %}" method="POST">
+        {% csrf_token %}
+        <buttom type="submit">送信</buttom>
+    </form>
+
+{% endblock %}

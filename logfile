@@ -1,0 +1,4 @@
+2020-09-21 03:25:38.049 JST [25305] FATAL:  data directory "/Users/yuma3/Documents/myapp/bucciarati/localdb" has invalid permissions
+2020-09-21 03:25:38.049 JST [25305] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).
+2020-09-21 03:31:31.749 JST [25409] FATAL:  data directory "/Users/yuma3/Documents/myapp/bucciarati/localdb" has invalid permissions
+2020-09-21 03:31:31.749 JST [25409] DETAIL:  Permissions should be u=rwx (0700) or u=rwx,g=rx (0750).

@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandstander:wght@500&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    {% static 'js/common.js' %}
+    {% static 'css/reset.css' %}
+  </head>
+  <body id="#top">
+    <p class="load">
+      <img src="" alt="" />
+    </p>
+
+    <!-- content-wrapper -->
+    <div id="contents-wrapper">
+
+      <!-- header -->
+      <header>
+
+
+
+
+        <div class="container">
+
+          <!-- nav-normal-view -->
+          <div class="normal-view">
+            <h1 class="logo">
+              <a href=""><img src="" alt="">logo image</a>
+            </h1>
+
+            <div class="pc">
+              <ul class="local-nav">
+                <li class="lnav"><a href="">CONTACT</a></li>
+              </ul>
+              <nav>
+                <ul class="global-nav">
+                  <li class="gnav1"><a href="">HOME</a></li>
+                  <li class="gnav2"><a href="">BLOG</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <p class="scroll-line"></p>
+          </div>
+
+          <!-- nav-small-view -->
+          <nav class="small-view">
+            <div class="nav-icon">
+              <div class="menu-btn">
+                <a id="toggle" href="">
+                  <span></span>
+                  <span></span>
+                </a>
+              </div>
+            </div>
+            <div class="small-nav">
+              <ul class="global-nav">
+                <li class="gnav1"><a href="">HOME</a></li>
+                <li class="gnav2"><a href="">ABOUT</a></li>
+                <li class="gnav3"><a href="">BLOG</a></li>
+              </ul>
+              <ul class="local-nav">
+                <li class="lnav"><a href="">CONTACT</a></li>
+                <li class="lnav-sns">
+                  <a href="" class="fab fa-twitter"></a>
+                  <a href="" class="fab fa-instagram"></a>
+                </li>
+                <li class="lnav-code">
+                  <a href=""class="fab fa-github"></a>
+                  <a href="" class="fab fa-docker"></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+
+        </div>
+      </header>
+
+      <!-- main content -->
+      <main class="main-content">
+        <div class="container">
+          <section class="about" id="about">
+              <div class="section-title">
+                <p class="title-name">ABOUT</p>
+              </div>
+              <div class="profile">
+                <div class="section-heading">
+                  <p class="heading-title">PROFILE</p>
+                </div>
+                <ul >
+                  <li>"澤村 勇磨　Sawamura Yuma"</li>
+                  <li>"22才"</li>
+                  <li>"2020年 青山学院大学 経営学部 卒業"</li>
+                  <li>"Pythonが好きな会社員"</li>
+                </ul>
+                <p>
+                  趣味の海外サッカー観戦をきっかけにデータ分析の面白さを知り、プログラミングと統計学を学び始めました。<br>言語はPythonを使っています。
+                </p>
+              </div>
+              <div class="language">
+                <p>使える言語・技術</p>
+                <ul class="language-list">
+                  <li class="language lan1">Python</li>
+                  <li class="language lan2">Django</li>
+                  <li class="language lan3">Dash</li>
+                  <li class="language lan4">Plotly</li>
+                  <li class="language lan5">Numpy</li>
+                  <li class="language lan6">Git</li>
+                  <li class="language lan7">Docker</li>
+                  <li class="language lan8">HTML</li>
+                  <li class="language lan9">CSS</li>
+                  <li class="language lan10">JavaScript</li>
+                </ul>
+              </div>
+          </section>
+
+          <section class="section-works" id="section-works">
+            <div class="inner">
+              <div class="section-title">
+                <h2 class="title-name">WORKS</h2>
+              </div>
+              <div class="description">
+                <p>Pythonを使ってWebアプリ開発、データ解析をしています。</p>
+              </div>
+              <div class="works">
+                <div class="work1">
+                  <figure>
+                    <a href="">
+                      <img src="" alt="アプリのスクリーンショット" />
+                    </a>
+                    <figcaption class="work-desc">
+                      <div class="site-name">SITE NAME</div>
+                      <div class="site-tips">SITE TIPS</div>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="work2">
+                  <figure>
+                    <a href="">
+                      <img src="" alt="アプリのスクリーンショット" />
+                    </a>
+                    <figcaption class="work-desc">
+                      <div class="site-name">SITE NAME</div>
+                      <!-- <div class="site-url">
+                        <a href="" target="_blank">URL</a>
+                      </div>
+                      <div class="use-language">
+                        languages: Python, Django, HTMl, CSS, JavaScript
+                      </div> -->
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="work3">
+                  <figure>
+                    <a href="">
+                      <img src="" alt="アプリのスクリーンショット" />
+                    </a>
+                    <figcaption class="work-desc">
+                      <div class="site-name">SITE NAME</div>
+                      <!-- <div class="site-url">
+                        <a href="" target="_blank">URL</a>
+                      </div>
+                      <div class="use-language">
+                        languages: Python, Django, HTMl, CSS, JavaScript
+                      </div> -->
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+
+
+            <div class="modal-wrapper">
+
+
+              <div class="works-modal" id="w-modal1">
+                <div class="close-modal">
+                  <i class="fas fa-times"></i>
+                </div>
+                <h2>SITE TITLE</h2>
+                <dl>
+                  <dt>URL</dt>
+                  <dd><a href="">SITE URL</a></dd>
+                  <dt>Source Code</dt>
+                  <dd>github url</dd>
+                  <dt>Description</dt>
+                  <dd>texttexttexttexttexttexttexttexttext</dd>
+                  <dt>Used Programming Language</dt>
+                  <dd>
+                    <ul class="use-language">
+                      <li><img src="" alt=""></li>
+                      <li><img src="" alt=""></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+
+              <div class="works-modal" id="w-modal2">
+                <div class="close-modal">
+                  <i class="fas fa-times"></i>
+                </div>
+                <h2>SITE TITLE</h2>
+                <dl>
+                  <dt>URL</dt>
+                  <dd><a href="">SITE URL</a></dd>
+                  <dt>Source Code</dt>
+                  <dd>github url</dd>
+                  <dt>Description</dt>
+                  <dd>texttexttexttexttexttexttexttexttext</dd>
+                  <dt>Used Programming Language</dt>
+                  <dd>
+                    <ul class="use-language">
+                      <li><img src="" alt=""></li>
+                      <li><img src="" alt=""></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+
+              <div class="works-modal" id="w-modal3">
+                <div class="close-modal">
+                  <i class="fas fa-times"></i>
+                </div>
+                <h2>SITE TITLE</h2>
+                <dl>
+                  <dt>URL</dt>
+                  <dd><a href="">SITE URL</a></dd>
+                  <dt>Source Code</dt>
+                  <dd>github url</dd>
+                  <dt>Description</dt>
+                  <dd>texttexttexttexttexttexttexttexttext</dd>
+                  <dt>Used Programming Language</dt>
+                  <dd>
+                    <ul class="use-language">
+                      <li><img src="" alt=""></li>
+                      <li><img src="" alt=""></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+
+
+            </div>
+
+
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
